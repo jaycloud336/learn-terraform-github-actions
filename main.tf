@@ -31,9 +31,9 @@ resource "aws_vpc" "app1" {
   cidr_block = "10.32.0.0/16"
 
   tags = {
-    Name    = "app1"
-    Service = "application1"
-    Owner   = "Cyberbullies"
+    Name        = "app1"
+    Service     = "application1"
+    Owner       = "Cyberbullies"
     Environment = "Dev"
   }
 }
@@ -76,9 +76,9 @@ resource "aws_security_group" "app1-sg01-servers" {
   }
 
   tags = {
-    Name    = "app1-sg01-servers"
-    Service = "application1"
-    Owner = "Cyberbullies"
+    Name        = "app1-sg01-servers"
+    Service     = "application1"
+    Owner       = "Cyberbullies"
     Environment = "Dev"
   }
 
@@ -94,9 +94,9 @@ resource "aws_subnet" "public-us-east-1a" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name    = "public-us-east-1a"
-    Service = "application1"
-    Owner = "Cyberbullies"
+    Name        = "public-us-east-1a"
+    Service     = "application1"
+    Owner       = "Cyberbullies"
     Environment = "Dev"
   }
 }
@@ -108,9 +108,9 @@ resource "aws_subnet" "public-us-east-1b" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name    = "public-us-east-1b"
-    Service = "application1"
-    Owner = "Cyberbullies"
+    Name        = "public-us-east-1b"
+    Service     = "application1"
+    Owner       = "Cyberbullies"
     Environment = "Dev"
   }
 }
@@ -123,9 +123,9 @@ resource "aws_subnet" "public-us-east-1c" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name    = "public-us-east-1c"
-    Service = "application1"
-    Owner = "Cyberbullies"
+    Name        = "public-us-east-1c"
+    Service     = "application1"
+    Owner       = "Cyberbullies"
     Environment = "Dev"
   }
 }
@@ -137,9 +137,9 @@ resource "aws_subnet" "private-us-east-1a" {
   availability_zone = "us-east-1a"
 
   tags = {
-    Name    = "private-us-east-1a"
-    Service = "application1"
-    Owner = "Cyberbullies"
+    Name        = "private-us-east-1a"
+    Service     = "application1"
+    Owner       = "Cyberbullies"
     Environment = "Dev"
   }
 }
@@ -150,9 +150,9 @@ resource "aws_subnet" "private-us-east-1b" {
   availability_zone = "us-east-1b"
 
   tags = {
-    Name    = "private-us-east-1b"
-    Service = "application1"
-    Owner = "Cyberbullies"
+    Name        = "private-us-east-1b"
+    Service     = "application1"
+    Owner       = "Cyberbullies"
     Environment = "Dev"
   }
 }
@@ -164,9 +164,9 @@ resource "aws_subnet" "private-us-east-1c" {
   availability_zone = "us-east-1c"
 
   tags = {
-    Name    = "private-us-east-1c"
-    Service = "application1"
-    Owner = "Cyberbullies"
+    Name        = "private-us-east-1c"
+    Service     = "application1"
+    Owner       = "Cyberbullies"
     Environment = "Dev"
   }
 }
@@ -175,9 +175,9 @@ resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.app1.id
 
   tags = {
-    Name    = "app1_IG"
-    Service = "application1"
-    Owner = "Cyberbullies"
+    Name        = "app1_IG"
+    Service     = "application1"
+    Owner       = "Cyberbullies"
     Environment = "Dev"
   }
 }
@@ -351,9 +351,9 @@ resource "aws_launch_template" "app1_LT" {
   tag_specifications {
     resource_type = "instance"
     tags = {
-      Name    = "app1_LT"
-      Service = "application1"
-      Owner   = "Cyberbullies"
+      Name        = "app1_LT"
+      Service     = "application1"
+      Owner       = "Cyberbullies"
       Environment = "Dev"
     }
   }
